@@ -1,3 +1,10 @@
 from django.db import models
 
-# Create your models here.
+
+class TheatreHall(models.Model):
+    name = models.CharField(max_length=255)
+    rows = models.PositiveIntegerField()
+    seats_in_row = models.PositiveIntegerField()
+
+    def __str__(self):
+        return self.name
